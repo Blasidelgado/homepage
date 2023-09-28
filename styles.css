@@ -1,0 +1,194 @@
+/* Variables */
+:root {
+    --btn-padding: 0.8em 1.6em;
+    --font-size: 1.2em;
+    --color-black: rgb(0, 0, 0);
+    --color-light-gray: rgb(69, 69, 69);
+    --color-light-brown: rgb(255, 245, 245);
+}
+
+/* General rule settings */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bodoni Moda', sans-serif;
+}
+
+.bg-colored {
+    background-color: var(--color-light-brown);
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+}
+
+.section .wrapper {
+    width: 100%;
+    max-width: 1224px;
+}
+
+h1, h2 {
+    width: 100%;
+    margin: 0 !important;
+    font-size: clamp(2.5vh, 1.5rem, 5vh);
+}
+
+/* Header */
+header {
+    padding: 1.5rem;
+}
+
+a.nav-link {
+    font-size: clamp(1.5vh, 1rem, 2.75vh);
+}
+
+header a, header a:hover {
+    text-decoration: none;
+    color: var(--color-light-gray);
+    text-align: right;
+}
+
+#navbarToggler {
+    justify-content: center;
+}
+
+.navbar-toggler-icon {
+    padding: max(0.75rem, 1.5vh);
+}
+
+.nav-underline .nav-link:hover,
+.nav-underline .nav-link-active {
+    text-decoration: underline;
+    color: var(--color-black);
+}
+
+/* Section 1 */
+
+.p-double {
+    max-width: 600px;
+}
+
+.text-col {
+    padding: 2rem;
+}
+
+.section img {
+    max-width: 100%;
+}
+
+/* Section 2 */
+.carousel-item .col-4, .carousel-item .col-6, .carousel-item .col-12 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8rem;
+}
+
+.img-logo {
+    width: 6rem;
+}
+
+.img-logo.rect {
+    width: 18rem;
+    max-width: 100%;
+}
+
+/* Section 5 */
+.p-text {
+    max-width: 400px;
+}
+
+/* Section 7 */
+#section-7 .btn {
+    padding: var(--btn-padding);
+    font-size: var(--font-size)
+}
+
+/* Aside */
+#aside img {
+    max-width: 300px;
+}
+
+/* Footer */
+#footer {
+    padding: 2em 2em 0 2em;
+}
+
+#media-icons > div{
+    height: 2em;
+    margin-bottom: 1em;
+}
+
+#media-icons .bi {
+    color: var(--color-black);
+    font-size: 1.5rem;
+    transition: all 0.2s ease-in-out;
+}
+
+#media-icons a:hover i {
+    font-size: 2em;
+}
+
+#footer-nav a {
+    text-decoration: underline;
+}
+
+#rights {
+    font-size: 0.8em;
+}
+
+/* Contact Form */
+.form-control, .form-control:focus {
+    border: none !important;
+    box-shadow: none;
+    color: rgb(112, 112, 112);
+    font-size: 1rem;
+    font-family: 'Helvetica', sans-serif;
+}
+
+input::placeholder, textarea::placeholder {
+    font-family: 'Helvetica', sans-serif;
+    color: rgb(210, 210, 210) !important;
+    font-size: 0.9rem;
+    font-weight: 100;
+}
+
+.btn[type="submit"] {
+    padding: var(--btn-padding);
+}
+
+/* Media Queries */
+@media screen and (max-width: 991px) {
+    .section .wrapper {
+        width: 100%;
+        max-width: 439px;
+    }
+
+    .section.aside .wrapper {
+        max-width: 350px;
+    }
+
+    .section.aside img {
+        max-width: 300px;
+    }
+
+    #nav {
+        justify-content: flex-end;
+        display: inline-flex;
+        float: right;
+        align-self: center;
+    }
+
+    #navbarToggler {
+        position: fixed;
+        width: 100vw;
+        left: 0;
+        right: 0;
+    }
+
+    #navbarToggler ul > li {
+        padding: 0.5rem;
+    }
+  }
